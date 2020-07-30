@@ -8,7 +8,6 @@ Deutsch ist schwer, deshalb ich brauche hilfe!
 
 import pandas as pd
 import numpy as np
-from datetime import datetime
 import click
 
 
@@ -86,15 +85,9 @@ class beispiel():
 @click.option("--gen", default=False, help="Generate new exercises")
 @click.option("--fid", default="missed_last_time.csv", help="File ID")
 def main(count, gen, fid):
-    time_stamp = datetime.strftime(datetime.now(), "%d-%m-%y_%H:%M")
-    exercise_fid = "modal_verbs_" + time_stamp + ".csv"
 
     if gen:
         en, de = modal_sampler(count)
-        df = pd.DataFrame({
-            "en":en,
-            "de":de
-        })
 
     else:
         df = pd.read_csv(fid)
