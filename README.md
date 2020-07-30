@@ -11,7 +11,7 @@ Zum Beispiel:
 python -m gerboi --count 10 --gen True
 ```
 ---
-##How does this work?
+## How does this work?
 
 gerBoi reads from content files that are in the repo and randomly draws samples to construct grammatically correct (if a little asinine) sentences in English and German. 
 
